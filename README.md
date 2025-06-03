@@ -1,67 +1,54 @@
-# 🧠 AI Vision Projects
+# 🤖 Real-Time Face & Emotion Detection
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![OpenCV](https://img.shields.io/badge/OpenCV-Enabled-green)
-![Status](https://img.shields.io/badge/status-Active-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![OpenCV](https://img.shields.io/badge/OpenCV-enabled-green)
+![DeepFace](https://img.shields.io/badge/DeepFace-active-purple)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-face--mesh-orange)
+![MIT License](https://img.shields.io/badge/license-MIT-yellow.svg)
 
-Welcome to the **AI Vision Projects** repository! This collection includes two real-time computer vision applications:
+This repository includes two real-time computer vision applications powered by OpenCV:
 
-- 📷 Simple Face Detection
-- 😊 Emotion Detection from Facial Expressions
+- 🎭 **Emotion Detection using DeepFace**
+- 👤 **Face Mesh Detection using MediaPipe**
 
-Whether you're getting started with OpenCV or exploring AI-based human emotion analysis, this repo is a great place to learn and experiment.
+> These applications use your webcam feed to detect and display facial emotions or landmark points in real time.
 
 ---
 
 <details>
 <summary><strong>📚 Table of Contents</strong></summary>
 
-- [🧠 Projects Overview](#-projects-overview)
-- [📂 Directory Structure](#-directory-structure)
+- [🧠 Project Overview](#-project-overview)
+- [📂 Folder Structure](#-folder-structure)
 - [⚙️ Installation](#️-installation)
-- [🚀 Getting Started](#-getting-started)
-- [🖼️ Example Outputs](#-example-outputs)
+- [🚀 Running the Applications](#-running-the-applications)
+- [📸 Sample Output](#-sample-output)
+- [❓ Troubleshooting](#-troubleshooting)
 - [🤝 Contributing](#-contributing)
 - [📝 License](#-license)
 </details>
 
 ---
 
-## 🧠 Projects Overview
+## 🧠 Project Overview
 
-### 1. 📷 Simple Face Detection
+### 1. 🎭 Emotion Detection (DeepFace)
 
-A beginner-friendly application that uses OpenCV and Haar Cascades to detect faces in real-time from webcam video.
+Detects and displays the dominant emotion from a user's face using [DeepFace](https://github.com/serengil/deepface).  
+✅ Supported emotions: happy, sad, angry, surprise, fear, neutral, disgust.
 
-- ✅ Real-time webcam face detection
-- ⚡ Lightweight and fast
-- 🔲 Face bounding box overlay
+### 2. 👤 Face Detection (MediaPipe)
 
-### 2. 😊 Emotion Detection
-
-This project uses deep learning to recognize human emotions (e.g., happy, sad, angry) from facial expressions in real time.
-
-- 🎯 Trained on FER-2013 dataset
-- 🧠 CNN-based emotion classification
-- 📊 Outputs emotion label and confidence score
+Utilizes [MediaPipe FaceMesh](https://google.github.io/mediapipe/solutions/face_mesh.html) to plot 468 facial landmarks for each detected face in the webcam feed.
 
 ---
 
-## 📂 Directory Structure
+## 📂 Folder Structure
 
 ```bash
 AI-Vision-Projects/
 │
-├── face_detection/
-│   ├── face_detect.py
-│   └── haarcascade_frontalface_default.xml
-│
-├── emotion_detection/
-│   ├── emotion_model.h5
-│   ├── emotion_labels.txt
-│   └── emotion_detect.py
-│
-├── assets/               # Example images or screenshots
+├── emotion_detection.py      # Real-time emotion recognition using DeepFace
+├── face_detection.py         # Real-time face landmark detection using MediaPipe
 ├── requirements.txt
 └── README.md
